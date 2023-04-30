@@ -2,6 +2,9 @@ import React from 'react';
 import { Button, ListGroup } from 'react-bootstrap';
 import { FaBeer, FaFacebook, FaGithub, FaGoogle, FaInstagram, FaTwitter } from 'react-icons/fa';
 import './RightNav.css'
+import picture1 from './../../../public/Pictures/qZone1.png'
+import picture2 from './../../../public/Pictures/qZone2.png'
+import picture3 from './../../../public/Pictures/qZone3.png'
 
 const RightNav = () => {
     return (
@@ -26,9 +29,9 @@ const RightNav = () => {
             <div className='bg-secondary-subtle text-center my-5 py-3' >
                 <h4>Q-Zone</h4>
                 <div >
-                    <img src="./Pictures/qZone1.png" alt="" />
-                    <img src="./Pictures/qZone2.png" alt="" />
-                    <img src="./Pictures/qZone3.png" alt="" />
+                    <img src={picture1} alt="" />
+                    <img src={picture2} alt="" />
+                    <img src={picture3} alt="" />
                 </div>
             </div>
 

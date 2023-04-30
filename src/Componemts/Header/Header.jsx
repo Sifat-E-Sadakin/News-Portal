@@ -3,6 +3,7 @@ import moment from 'moment/moment';
 import React, { useContext } from 'react';
 import Marquee from 'react-fast-marquee';
 import { UserInfo } from '../UserContext/UserContext';
+import logo from './../../../public/Pictures/logo.png'
 
 
 
@@ -12,7 +13,7 @@ const Header = () => {
    
     return (
         <div>
-            <img src="./Pictures/logo.png" alt="" />
+            <img src={logo} alt="" />
             <p className='fw-medium'>Journalism Without Fear or Favour</p>
             <p className='fw-bold'>{moment().format("dddd, MMMM Do YYYY, h:mm a")}</p>
             <div className='text-start bg-dark-subtle d-flex'>

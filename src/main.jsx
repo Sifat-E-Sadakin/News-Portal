@@ -5,6 +5,7 @@ import './index.css'
 
 import {
   createBrowserRouter,
+  Navigate,
   RouterProvider,
 } from "react-router-dom";
 import LandingPage from './Componemts/LandingPage/LandingPage';
@@ -20,12 +21,13 @@ import PrivateRoute from './Componemts/PrivateRoute/PrivateRoute';
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <LandingPage></LandingPage>,
+    element: <><LandingPage></LandingPage> <Navigate to='/news/0'></Navigate></>,
+    
     children: [
       {
         path: "news/:id",
         element: <News></News>,
-        loader: ({params})=> fetch(`http://localhost:5000/category/${params.id}`)
+        loader: ({params})=> fetch(`https://news-server-sifat-e-sadakin.vercel.app/category/${params.id}`)
       },
      
     ],
@@ -39,7 +41,7 @@ const router = createBrowserRouter([
       {
         path: "news/:id",
         element: <NewsDetails></NewsDetails>,
-        loader: ({params})=> fetch(`http://localhost:5000/news/${params.id}`)
+        loader: ({params})=> fetch(`https://news-server-sifat-e-sadakin.vercel.app/news/${params.id}`)
       },
     ],
     
